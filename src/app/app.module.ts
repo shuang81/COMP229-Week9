@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,6 +11,9 @@ import { AboutComponent } from './content/about/about.component';
 import { ServicesComponent } from './content/services/services.component';
 import { ProjectsComponent } from './content/projects/projects.component';
 import { ContactComponent } from './content/contact/contact.component';
+import { LoginComponent } from './content/auth/login/login.component';
+import { RegisterComponent } from './content/auth/register/register.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +24,15 @@ import { ContactComponent } from './content/contact/contact.component';
     AboutComponent,
     ServicesComponent,
     ProjectsComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
